@@ -1,3 +1,21 @@
+# Superbowl Squares
+
+MVP:
+See the very first whiteboard
+We are going to have a 10x10 grid with 0-9 on top and a place on the right to add names. once you add names, hit the button. then, names or initials or something will populate in the squares.
+
+Later:
+Choose how many squares each person gets
+pick squares
+pick squares then assign numbers (maybe just an option)
+fancier adding people
+other ways of making it more fair
+
+
+Way later:
+hook into real scores
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
