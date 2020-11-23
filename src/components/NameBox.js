@@ -1,24 +1,16 @@
-import React, {useState , useEffect} from 'react'
+import React, {useState } from 'react'
 
 export const NameBox = () => {
   const [name, setName] = useState("");
   const [nameList,setNameList] = useState([]);
 
-  // useEffect(() => {
-  // }, []);
-
-
-
   const onChange = (e) => {
-    // console.log(name);
     setName(e.target.value);
   }
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // console.log(name);
-    setNameList([...nameList, name]);
-    // console.log(nameList);
+    setNameList([name, ...nameList]);
     setName("");
   }
 
@@ -33,7 +25,13 @@ export const NameBox = () => {
         />
       </form>
       <div>
-        {nameList}
+        <ol>
+          {
+            nameList.map((name) => {
+              return <li>{name}</li>
+            })
+          }
+        </ol>
       </div>
     </div>
   )
