@@ -1,4 +1,5 @@
 import React, {useState } from 'react'
+import "../App.css"
 
 export const NameBox = () => {
   const [name, setName] = useState("");
@@ -15,7 +16,9 @@ export const NameBox = () => {
   }
 
   return (
-    <div>
+    <div className="nameBox">
+    <div><button>Fill Squares!</button></div>
+    <br />
       <form onSubmit = {(e) => onSubmit(e)}>
         <input type = "text"
         placeholder = "Name" 
