@@ -15,6 +15,7 @@ export const SquaresColumn = styled.div`
   border-width: thin;
   height: 30px;
   width: 30px;
+  text-align: center;
 `
 
 export const SquaresGrid = () => {
@@ -23,13 +24,13 @@ export const SquaresGrid = () => {
       <SquaresRow>
         <SquaresColumn/>
         {zero_to_nine.map((header_number) => (
-          <SquaresColumn key={'header' + header_number}>{header_number}</SquaresColumn>
+          <SquaresColumn key={'header' + header_number}><span className="headerText">{header_number}</span></SquaresColumn>
         ))}
       </SquaresRow>
 
       {zero_to_nine.map((row_number) => (
         <SquaresRow key={row_number}>
-          <SquaresColumn key={'firstcol' + row_number}>{row_number}</SquaresColumn>
+          <SquaresColumn key={'firstcol' + row_number}><span className="headerText">{row_number}</span></SquaresColumn>
           {zero_to_nine.map((column_number) => (
             <SquaresColumn key={column_number}></SquaresColumn>
           ))}

@@ -4,12 +4,37 @@
   min-height: 400px;
 }
 
-.squaresGrid{
-  flex: 4;
-  padding: 30px;
+h1 {
+  text-align: center;
 }
 
-.nameBox{
+.squaresGrid {
+  flex: 4;
+  margin: 30px;
+  border-style: solid;
+  border-width: medium;
+}
+
+.headerText{
+  vertical-align: middle;
+}
+
+.nameBox {
   flex: 1;
-  padding-left: 30px;
+  margin: 30px;
+  min-height: 330px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.btn {
+  text-align: center;
+}
+
+.nameInput {
+  text-align: center;
+}
+
+.singleName {
+  padding: 5px;
 }
