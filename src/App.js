@@ -13,16 +13,15 @@ export const RightPanel = styled.div`
   flex: 2;
 `
 
-
 function App() {
   return (
     <div className="App">
       <LeftPanel>
-      <SquaresGrid />
-     </LeftPanel>
-     <RightPanel>
-      <NameBox />
-     </RightPanel>
+        <SquaresGrid />
+      </LeftPanel>
+      <RightPanel>
+        <NameBox />
+      </RightPanel>
     </div>
   );
 }

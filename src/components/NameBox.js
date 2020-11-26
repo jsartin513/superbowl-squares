@@ -17,21 +17,23 @@ export const NameBox = () => {
 
   return (
     <div className="nameBox">
-    <div><button>Fill Squares!</button></div>
+    <div className="btn"><button>Fill Squares!</button></div>
     <br />
-      <form onSubmit = {(e) => onSubmit(e)}>
-        <input type = "text"
-        placeholder = "Name" 
-        name = "name" 
-        value = {name} 
-        onChange = {(e) => onChange(e)} 
-        />
+      <form
+        className = "nameInput" 
+        onSubmit = {(e) => onSubmit(e)}>
+          <input type = "text"
+          placeholder = "Name" 
+          name = "name" 
+          value = {name} 
+          onChange = {(e) => onChange(e)} 
+          />
       </form>
-      <div>
+      <div className="nameList">
         <ol>
           {
             nameList.map((name) => {
-              return <li>{name}</li>
+              return <li className="singleName">{name}</li>
             })
           }
         </ol>
