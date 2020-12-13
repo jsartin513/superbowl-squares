@@ -1,7 +1,11 @@
 import React, {useState } from 'react'
 import "../App.css"
 
-export const NameBox = () => {
+export const NameBox = (props) => {
+  const confirmNames = () => {
+    props.confirmNameList(nameList);
+  }
+
   const [name, setName] = useState("");
   const [nameList, setNameList] = useState([]);
 
@@ -17,7 +21,7 @@ export const NameBox = () => {
 
   return (
     <div className="nameBox">
-    
+    <div className="btn" onClick={() => confirmNames()}><button>Fill Squares!</button></div>
     <br />
       <form
         className = "nameInput" 
