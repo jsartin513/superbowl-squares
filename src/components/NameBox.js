@@ -1,9 +1,13 @@
 import React, {useState } from 'react'
 import "../App.css"
 
-export const NameBox = () => {
+export const NameBox = (props) => {
+  const confirmNames = () => {
+    props.confirmNameList(nameList);
+  }
+
   const [name, setName] = useState("");
-  const [nameList,setNameList] = useState([]);
+  const [nameList, setNameList] = useState([]);
 
   const onChange = (e) => {
     setName(e.target.value);
@@ -17,7 +21,7 @@ export const NameBox = () => {
 
   return (
     <div className="nameBox">
-    <div className="btn"><button>Fill Squares!</button></div>
+    <div className="btn" onClick={() => confirmNames()}><button>Fill Squares!</button></div>
     <br />
       <form
         className = "nameInput" 
@@ -33,7 +37,7 @@ export const NameBox = () => {
         <ol>
           {
             nameList.map((name) => {
-              return <li className="singleName">{name}</li>
+              return <li key={name} className="singleName">{name}</li>
             })
           }
         </ol>

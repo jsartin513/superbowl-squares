@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import "../App.css"
 
-const zero_to_nine = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const zero_to_nine = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export const SquaresRow = styled.div`
   display: flex;
@@ -18,7 +18,8 @@ export const SquaresColumn = styled.div`
   text-align: center;
 `
 
-export const SquaresGrid = () => {
+export const SquaresGrid = (props) => {
+  const {squareNames} = props;
   return (
     <div className="squaresGrid">
       <SquaresRow>
@@ -32,7 +33,7 @@ export const SquaresGrid = () => {
         <SquaresRow key={row_number}>
           <SquaresColumn key={'firstcol' + row_number}><span className="headerText">{row_number}</span></SquaresColumn>
           {zero_to_nine.map((column_number) => (
-            <SquaresColumn key={column_number}></SquaresColumn>
+            <SquaresColumn key={column_number}>{squareNames[10*row_number + column_number]}</SquaresColumn>
           ))}
         </SquaresRow>
       ))}
