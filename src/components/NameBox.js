@@ -15,13 +15,17 @@ export const NameBox = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setNameList([name, ...nameList]);
-    setName("");
+    if (nameList.findIndex((nl) => nl === name) === -1) {
+      setNameList([name, ...nameList]);
+      setName("");
+    }
   }
 
   return (
     <div className="nameBox">
-    <div className="btn" onClick={() => confirmNames()}><button>Fill Squares!</button></div>
+    <div className="btn">
+      <button disabled={nameList.length < 2 } onClick={() => confirmNames()}> Fill Squares!</button>
+    </div>
     <br />
       <form
         className = "nameInput" 
