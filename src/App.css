@@ -8,6 +8,17 @@ h1 {
   text-align: center;
 }
 
+.teamRow {
+  border-bottom-style: solid; 
+  border-bottom-width: medium;
+  justify-content: center;
+}
+
+.teamColumn {
+  border-top-style: none !important;
+  border-bottom-style: none !important;
+}
+
 .squaresGrid {
   flex: 4;
   margin: 30px;
