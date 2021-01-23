@@ -38,13 +38,22 @@ function shuffleArray(array) {
     <div className="OuterApp">
       <InstructionsBox />
       <div className="App">
-      <LeftPanel>
-        <SquaresGrid squareNames={squareNames}/>
-      </LeftPanel>
-      <RightPanel>
-        <NameBox confirmNameList = {fillSquares}/>
-      </RightPanel>
-    </div>
+        <LeftPanel>
+          <SquaresGrid squareNames={squareNames}/>
+        </LeftPanel>
+        <RightPanel>
+          <NameBox confirmNameList = {fillSquares}/>
+        </RightPanel>
+      </div>
+      <div className="footer">
+        <div className="footerContent">
+          <div className="footerLeft">© 2021 Jess Sartin and Mike Spremulli</div>
+          <div className="footerRight">
+            <a href="https://github.com/jsartin513/superbowl-squares">Source</a> <br/>
+            <a href="https://github.com/jsartin513/superbowl-squares/issues">Having a problem?</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
