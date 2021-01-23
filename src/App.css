@@ -8,6 +8,16 @@ h1 {
   text-align: center;
 }
 
+.instructionsBox {
+  margin: 0px 30px;
+}
+
+/* Squares Grid */
+
+.headerText{
+  vertical-align: middle;
+}
+
 .teamRow {
   border-bottom-style: solid; 
   border-bottom-width: medium;
@@ -26,14 +36,12 @@ h1 {
   border-width: medium;
 }
 
-.headerText{
-  vertical-align: middle;
-}
 
+/* Name box */
 .nameBox {
   flex: 1;
   margin: 30px;
-  min-height: 330px;
+  min-height: 365px;
   border-style: solid;
   border-width: thin;
 }
@@ -48,4 +56,25 @@ h1 {
 
 .singleName {
   padding: 5px;
+}
+
+ /* Footer */
+.footer {
+  min-height: 100px;
+  background-color :lightgray;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.footerContent {
+  padding: 30px;
+}
+
+.footerLeft {
+  float: left;
+}
+
+.footerRight {
+  float: right;
 }

@@ -41,6 +41,19 @@ function shuffleArray(array) {
         <NameBox confirmNameList = {fillSquares}/>
       </RightPanel>
     </div>
+<<<<<<< HEAD
+=======
+    <div className="footer">
+      <div className="footerContent">
+        <div class="footerLeft">© 2021 Jess Sartin and Mike Spremulli</div>
+        <div class="footerRight">
+          <a href="https://github.com/jsartin513/superbowl-squares">Source</a> <br/>
+          <a href="https://github.com/jsartin513/superbowl-squares/issues">Having a problem?</a>
+        </div>
+      </div>
+    </div>
+    </div>
+>>>>>>> 0a1cef1... Add copyright footer
   );
 }
 
