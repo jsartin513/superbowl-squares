@@ -1,6 +1,7 @@
 import React,{ useState} from 'react';
 import './App.css';
 import styled from 'styled-components'
+import { InstructionsBox } from './components/InstructionsBox';
 import { NameBox } from './components/NameBox';
 import { SquaresGrid } from './components/SquaresGrid';
 
@@ -12,6 +13,7 @@ export const LeftPanel = styled.div`
 export const RightPanel = styled.div`
   flex: 2;
 `
+
 function App() {
   const [squareNames, setNames] = useState(new Array(100).fill("")); 
 
@@ -33,13 +35,16 @@ function shuffleArray(array) {
   }
 
   return (
-    <div className="App">
+    <div className="OuterApp">
+      <InstructionsBox />
+      <div className="App">
       <LeftPanel>
         <SquaresGrid squareNames={squareNames}/>
       </LeftPanel>
       <RightPanel>
         <NameBox confirmNameList = {fillSquares}/>
       </RightPanel>
+    </div>
     </div>
   );
 }

@@ -30,6 +30,10 @@ h1 {
   vertical-align: middle;
 }
 
+.instructionsBox {
+  margin: 0px 30px;
+}
+
 .nameBox {
   flex: 1;
   margin: 30px;
