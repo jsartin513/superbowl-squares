@@ -13,15 +13,19 @@ export const RightPanel = styled.div`
   flex: 2;
 `
 function App() {
-  const [squareNames, setNames] = useState(new Array(100).fill("")); 
+  const zero_to_nine = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+  const [squareNames, setNames] = useState(new Array(100).fill("")); 
+  const [afcScores, setAfcScores] = useState(zero_to_nine); 
+  const [nfcScores, setNfcScores] = useState(zero_to_nine); 
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
   }
-  return array;
-}
 
   const fillSquares = (nameList) => {
     const newNames = [];
@@ -30,12 +34,14 @@ function shuffleArray(array) {
     }
 
     setNames(shuffleArray(newNames));
+    setAfcScores(shuffleArray(zero_to_nine));
+    setNfcScores(shuffleArray(zero_to_nine));
   }
 
   return (
     <div className="App">
       <LeftPanel>
-        <SquaresGrid squareNames={squareNames}/>
+        <SquaresGrid squareNames={squareNames} afcScores={afcScores} nfcScores={nfcScores}/>
       </LeftPanel>
       <RightPanel>
         <NameBox confirmNameList = {fillSquares}/>
