@@ -8,6 +8,7 @@ export const NameBox = (props) => {
 
   const [name, setName] = useState("");
   const [nameList, setNameList] = useState([]);
+  const [showNameError, setShowNameError] = useState(false);
 
   const onChange = (e) => {
     setName(e.target.value);
@@ -15,18 +16,29 @@ export const NameBox = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (nameList.findIndex((nl) => nl === name) === -1) {
-      setNameList([name, ...nameList]);
+    if (nameList.findIndex((nl) => nl === name.trim()) === -1) {
+      setNameList([name.trim(), ...nameList]);
       setName("");
+      if (showNameError){
+        setShowNameError(false)
+      }
+    }
+    else {
+      setShowNameError(true)
     }
   }
 
   return (
     <div className="nameBox">
-    <div className="btn">
-      <button disabled={nameList.length < 2 } onClick={() => confirmNames()}> Fill Squares!</button>
-    </div>
-    <br />
+      <div className="btn">
+        <button disabled={nameList.length < 2 } onClick={() => confirmNames()}> Fill Squares!</button>
+      </div>
+      <br />
+
+      <div className={`nameError ${showNameError ? "" : "notDisplayed"}`}>
+        Please enter unique name.
+      </div>
+
       <form
         className = "nameInput" 
         onSubmit = {(e) => onSubmit(e)}>

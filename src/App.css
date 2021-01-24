@@ -12,6 +12,10 @@ h1 {
   margin: 0px 30px;
 }
 
+.notDisplayed {
+  display: none;
+}
+
 /* Squares Grid */
 
 .headerText{
@@ -48,6 +52,14 @@ h1 {
 
 .btn {
   text-align: center;
+}
+
+.nameError {
+  text-align: center;
+  border-style: solid;
+  border-color: red;
+  padding: 5px;
+  margin: 10px;
 }
 
 .nameInput {
